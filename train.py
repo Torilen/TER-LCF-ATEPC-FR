@@ -62,7 +62,7 @@ def main(config):
         'restaurant': "atepc_datasets/restaurant",
         'twitter': "atepc_datasets/twitter",
         'mixed': "atepc_datasets/mixed",
-        'ter_data': "atepc_datasets/fr_restaurant",
+        'ter_data': "atepc_datasets/ter_data",
     }
     pretrained_bert_models = {
         'camera': "bert-base-chinese",
