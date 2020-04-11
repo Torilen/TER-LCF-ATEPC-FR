@@ -1,6 +1,6 @@
 {
   "config1": {
-    "dataset": "fr_restaurant",
+    "dataset": "ter_data",
     "output_dir": "output",
     "use_bert_spc": false,
     "SRD": 5,

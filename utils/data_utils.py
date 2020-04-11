@@ -119,6 +119,9 @@ class ATEPCProcessor(DataProcessor):
         elif 'mixed' in data_dir:
             return self._create_examples(
                 self._read_tsv(os.path.join(data_dir, "mixed.atepc.train.dat")), "train")
+        elif 'ter_data' in data_dir:
+            return self._create_examples(
+                self._read_tsv(os.path.join(data_dir, "ter.atepc.train.dat")), "train")
 
     # def get_dev_examples(self, data_dir):
     #     """See base class."""
@@ -158,6 +161,9 @@ class ATEPCProcessor(DataProcessor):
         elif 'mixed' in data_dir:
             return self._create_examples(
                 self._read_tsv(os.path.join(data_dir, "mixed.atepc.test.dat")), "test")
+        elif 'ter_data' in data_dir:
+            return self._create_examples(
+                self._read_tsv(os.path.join(data_dir, "ter.atepc.test.dat")), "test")
 
 
     def get_labels(self):
