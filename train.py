@@ -338,7 +338,7 @@ def parse_experiments(path):
 if __name__ == "__main__":
 
     experiments = argparse.ArgumentParser()
-    experiments.add_argument('--config_path', default='experiments.json', type=str,help='Path of experiments config file')
+    experiments.add_argument('--config_path', default='french_experiments.json', type=str,help='Path of experiments config file')
     experiments = experiments.parse_args()
 
     from utils.Pytorch_GPUManager import GPUManager
