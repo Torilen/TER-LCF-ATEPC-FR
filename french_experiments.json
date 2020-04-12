@@ -94,5 +94,5 @@
     "train_batch_size": 16,
     "max_seq_length": 160,
     "local_context_focus": "None"
-  },
+  }
 }
