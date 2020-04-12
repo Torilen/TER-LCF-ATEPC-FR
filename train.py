@@ -15,8 +15,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from pytorch_transformers.optimization import AdamW
-from pytorch_transformers.tokenization_bert import BertTokenizer
-from pytorch_transformers.modeling_bert import BertModel
+from pytorch_transformers.tokenization_camembert import CamembertTokenizer
+from pytorch_transformers.modeling_camembert import CamembertModel
 from seqeval.metrics import classification_report
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler, TensorDataset)
 
