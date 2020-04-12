@@ -89,12 +89,12 @@ def main(config):
                     polarities.append(polarity)
             examples[i].polarity = polarities
 
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=True)
+    tokenizer = CamembertTokenizer.from_pretrained(args.bert_model, do_lower_case=True)
     train_examples = processor.get_train_examples(args.data_dir)
     eval_examples = processor.get_test_examples(args.data_dir)
     num_train_optimization_steps = int(
         len(train_examples) / args.train_batch_size / args.gradient_accumulation_steps) * args.num_train_epochs
-    bert_base_model = BertModel.from_pretrained(args.bert_model)
+    bert_base_model = CamembertModel.from_pretrained(args.bert_model)
     bert_base_model.config.num_labels = num_labels
 
     if args.dataset in {'camera', 'car', 'phone', 'notebook'}:
