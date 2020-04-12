@@ -73,7 +73,7 @@ def main(config):
         'restaurant': "bert-base-uncased",
         'twitter': "bert-base-uncased",
         'mixed': "bert-base-multilingual-uncased",
-        'ter_data': "bert-base-multilingual-uncased",
+        'ter_data': "camembert-base",
     }
 
     args.bert_model = pretrained_bert_models[args.dataset]
