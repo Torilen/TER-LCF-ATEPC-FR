@@ -14,9 +14,9 @@ from time import strftime, localtime
 import numpy as np
 import torch
 import torch.nn.functional as F
-from pytorch_transformers.optimization import AdamW
-from pytorch_transformers import CamembertTokenizer
-from pytorch_transformers import CamembertModel
+from transformers.optimization import AdamW
+from transformers import CamembertTokenizer
+from transformers import CamembertModel
 from seqeval.metrics import classification_report
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler, TensorDataset)
 
