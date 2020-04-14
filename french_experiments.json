@@ -7,7 +7,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "cdm"
   },
@@ -19,7 +19,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "cdw"
   },
@@ -31,7 +31,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "fusion"
   },
@@ -43,7 +43,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "None"
   },
@@ -55,7 +55,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 160,
     "local_context_focus": "cdm"
   },
@@ -67,7 +67,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 160,
     "local_context_focus": "cdw"
   },
@@ -79,7 +79,7 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
     "max_seq_length": 160,
     "local_context_focus": "fusion"
   },
@@ -91,7 +91,103 @@
     "learning_rate": 3e-5,
     "dropout": 0,
     "num_train_epochs": 5,
-    "train_batch_size": 16,
+    "train_batch_size": 32,
+    "max_seq_length": 160,
+    "local_context_focus": "None"
+  },
+  "config9": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 80,
+    "local_context_focus": "cdm"
+  },
+  "config10": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 80,
+    "local_context_focus": "cdw"
+  },
+  "config11": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 80,
+    "local_context_focus": "fusion"
+  },
+  "config12": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 80,
+    "local_context_focus": "None"
+  },
+  "config13": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 160,
+    "local_context_focus": "cdm"
+  },
+  "config14": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 160,
+    "local_context_focus": "cdw"
+  },
+  "config15": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
+    "max_seq_length": 160,
+    "local_context_focus": "fusion"
+  },
+  "config16": {
+    "dataset": "ter_data",
+    "output_dir": "output",
+    "use_bert_spc": true,
+    "SRD": 5,
+    "learning_rate": 3e-5,
+    "dropout": 0,
+    "num_train_epochs": 5,
+    "train_batch_size": 32,
     "max_seq_length": 160,
     "local_context_focus": "None"
   }
