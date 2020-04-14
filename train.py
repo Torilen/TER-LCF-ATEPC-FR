@@ -97,7 +97,7 @@ def main(config):
     bert_base_model = BertModel.from_pretrained(args.bert_model)
     bert_base_model.config.num_labels = num_labels
 
-    if args.dataset in {'camera', 'car', 'phone', 'notebook'}:
+    if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data'}:
         convert_polarity(train_examples)
         convert_polarity(eval_examples)
         model = LCF_ATEPC(bert_base_model, args=args)
