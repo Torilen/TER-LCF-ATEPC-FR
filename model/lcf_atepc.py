@@ -4,7 +4,7 @@
 # Copyright (C) 2019. All Rights Reserved.
 
 
-from pytorch_transformers.modeling_bert import BertForTokenClassification, BertPooler, BertSelfAttention
+from transformers.modeling_bert import BertForTokenClassification, BertPooler, BertSelfAttention
 
 from torch.nn import Linear, CrossEntropyLoss
 import torch
@@ -37,7 +37,7 @@ class LCF_ATEPC(BertForTokenClassification):
         if self.args.local_context_focus is not None:
             self.local_bert = copy.deepcopy(self.bert)
         self.pooler = BertPooler(config)
-        if args.dataset in {'camera', 'car', 'phone', 'notebook'}:
+        if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data'}:
             self.dense = torch.nn.Linear(768, 2)
         else:
             self.dense = torch.nn.Linear(768, 3)
