@@ -98,12 +98,12 @@ def main(config):
     bert_base_model.config.num_labels = num_labels
 
     if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data'}:
-	logger.info("Convert polarity")
+        logger.info("Convert polarity")
         convert_polarity(train_examples)
         convert_polarity(eval_examples)
         model = LCF_ATEPC(bert_base_model, args=args)
     else:
-	logger.info("Don't convert polarity")
+        logger.info("Don't convert polarity")
         model = LCF_ATEPC(bert_base_model, args=args)
 
     for arg in vars(args):
