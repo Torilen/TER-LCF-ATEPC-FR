@@ -103,6 +103,7 @@ def main(config):
         convert_polarity(eval_examples)
         model = LCF_ATEPC(bert_base_model, args=args)
     else:
+	logger.info("Don't convert polarity")
         model = LCF_ATEPC(bert_base_model, args=args)
 
     for arg in vars(args):
