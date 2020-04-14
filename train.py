@@ -73,7 +73,7 @@ def main(config):
         'restaurant': "bert-base-uncased",
         'twitter': "bert-base-uncased",
         'mixed': "bert-base-multilingual-uncased",
-        'ter_data': "bert-base-multilingual-uncased",
+        'ter_data': "bert-base-multilingual-cased",
     }
 
     args.bert_model = pretrained_bert_models[args.dataset]
@@ -89,7 +89,7 @@ def main(config):
                     polarities.append(polarity)
             examples[i].polarity = polarities
 
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=True)
+    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=False)
     train_examples = processor.get_train_examples(args.data_dir)
     eval_examples = processor.get_test_examples(args.data_dir)
     num_train_optimization_steps = int(
@@ -190,7 +190,7 @@ def main(config):
                             temp_2.append(label_map.get(ate_logits[i][j], 'O'))
         if eval_APC:
             test_acc = n_test_correct / n_test_total
-            if args.dataset in {'camera', 'car', 'phone', 'notebook'}:
+            if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data'}:
                 test_f1 = f1_score(torch.argmax(test_apc_logits_all, -1).cpu(), test_polarities_all.cpu(),
                                    labels=[0, 1], average='macro')
             else:
