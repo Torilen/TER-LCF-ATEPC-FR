@@ -14,9 +14,9 @@ from time import strftime, localtime
 import numpy as np
 import torch
 import torch.nn.functional as F
-from transformers.optimization import AdamW
-from transformers import CamembertTokenizer
-from transformers import CamembertModel
+from pytorch_transformers.optimization import AdamW
+from pytorch_transformers.tokenization_bert import BertTokenizer
+from pytorch_transformers.modeling_bert import BertModel
 from seqeval.metrics import classification_report
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler, TensorDataset)
 
@@ -73,7 +73,7 @@ def main(config):
         'restaurant': "bert-base-uncased",
         'twitter': "bert-base-uncased",
         'mixed': "bert-base-multilingual-uncased",
-        'ter_data': "camembert-base",
+        'ter_data': "bert-base-multilingual-uncased",
     }
 
     args.bert_model = pretrained_bert_models[args.dataset]
@@ -89,12 +89,12 @@ def main(config):
                     polarities.append(polarity)
             examples[i].polarity = polarities
 
-    tokenizer = CamembertTokenizer.from_pretrained(args.bert_model, do_lower_case=True)
+    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=True)
     train_examples = processor.get_train_examples(args.data_dir)
     eval_examples = processor.get_test_examples(args.data_dir)
     num_train_optimization_steps = int(
         len(train_examples) / args.train_batch_size / args.gradient_accumulation_steps) * args.num_train_epochs
-    bert_base_model = CamembertModel.from_pretrained(args.bert_model)
+    bert_base_model = BertModel.from_pretrained(args.bert_model)
     bert_base_model.config.num_labels = num_labels
 
     if args.dataset in {'camera', 'car', 'phone', 'notebook'}:
