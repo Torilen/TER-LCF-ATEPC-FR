@@ -6,7 +6,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "cdm"
@@ -18,7 +18,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "cdw"
@@ -30,7 +30,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "fusion"
@@ -42,7 +42,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "None"
@@ -54,7 +54,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "cdm"
@@ -66,7 +66,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "cdw"
@@ -78,7 +78,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "fusion"
@@ -90,7 +90,7 @@
     "SRD": 5,
     "learning_rate": 3e-5,
     "dropout": 0,
-    "num_train_epochs": 5,
+    "num_train_epochs": 20,
     "train_batch_size": 32,
     "max_seq_length": 80,
     "local_context_focus": "None"
