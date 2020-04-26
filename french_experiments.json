@@ -143,7 +143,7 @@
     "max_seq_length": 80,
     "local_context_focus": "None"
   },
-  "config9": {
+  "config13": {
     "dataset": "ter_data",
     "output_dir": "output",
     "use_bert_spc": true,
@@ -155,7 +155,7 @@
     "max_seq_length": 160,
     "local_context_focus": "cdm"
   },
-  "config10": {
+  "config14": {
     "dataset": "ter_data",
     "output_dir": "output",
     "use_bert_spc": true,
@@ -167,7 +167,7 @@
     "max_seq_length": 160,
     "local_context_focus": "cdw"
   },
-  "config11": {
+  "config15": {
     "dataset": "ter_data",
     "output_dir": "output",
     "use_bert_spc": true,
@@ -179,7 +179,7 @@
     "max_seq_length": 160,
     "local_context_focus": "fusion"
   },
-  "config12": {
+  "config16": {
     "dataset": "ter_data",
     "output_dir": "output",
     "use_bert_spc": true,
