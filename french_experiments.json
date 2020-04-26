@@ -8,7 +8,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "cdm"
   },
   "config2": {
@@ -20,7 +20,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "cdw"
   },
   "config3": {
@@ -32,7 +32,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "fusion"
   },
   "config4": {
@@ -44,7 +44,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "None"
   },
   "config5": {
@@ -152,7 +152,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "cdm"
   },
   "config14": {
@@ -164,7 +164,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "cdw"
   },
   "config15": {
@@ -176,7 +176,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "fusion"
   },
   "config16": {
@@ -188,7 +188,7 @@
     "dropout": 0,
     "num_train_epochs": 5,
     "train_batch_size": 32,
-    "max_seq_length": 160,
+    "max_seq_length": 120,
     "local_context_focus": "None"
   }
 }
