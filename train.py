@@ -64,6 +64,7 @@ def main(config):
         'mixed': "atepc_datasets/mixed",
         'ter_data': "atepc_datasets/ter_data",
         'canephore': "atepc_datasets/canephore",
+        'museum': "atepc_datasets/museum",
     }
     pretrained_bert_models = {
         'camera': "bert-base-chinese",
@@ -76,6 +77,7 @@ def main(config):
         'mixed': "bert-base-multilingual-uncased",
         'ter_data': "bert-base-multilingual-cased",
         'canephore': "bert-base-multilingual-cased",
+        'museum': "bert-base-multilingual-cased",
     }
 
     args.bert_model = pretrained_bert_models[args.dataset]
@@ -99,7 +101,7 @@ def main(config):
     bert_base_model = BertModel.from_pretrained(args.bert_model)
     bert_base_model.config.num_labels = num_labels
 
-    if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data', 'canephore'}:
+    if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data', 'canephore', 'museum'}:
         logger.info("Convert polarity")
         convert_polarity(train_examples)
         convert_polarity(eval_examples)
@@ -192,7 +194,7 @@ def main(config):
                             temp_2.append(label_map.get(ate_logits[i][j], 'O'))
         if eval_APC:
             test_acc = n_test_correct / n_test_total
-            if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data', 'canephore'}:
+            if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data', 'canephore', 'museum'}:
                 test_f1 = f1_score(torch.argmax(test_apc_logits_all, -1).cpu(), test_polarities_all.cpu(),
                                    labels=[0, 1], average='macro')
             else:
@@ -342,7 +344,7 @@ def parse_experiments(path):
 if __name__ == "__main__":
 
     experiments = argparse.ArgumentParser()
-    experiments.add_argument('--config_path', default='canephore.json', type=str,help='Path of experiments config file')
+    experiments.add_argument('--config_path', default='museum_experiments.json', type=str,help='Path of experiments config file')
     experiments = experiments.parse_args()
 
     from utils.Pytorch_GPUManager import GPUManager

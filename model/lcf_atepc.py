@@ -37,7 +37,7 @@ class LCF_ATEPC(BertForTokenClassification):
         if self.args.local_context_focus is not None:
             self.local_bert = copy.deepcopy(self.bert)
         self.pooler = BertPooler(config)
-        if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data', 'canephore'}:
+        if args.dataset in {'camera', 'car', 'phone', 'notebook', 'ter_data', 'canephore', 'museum'}:
             self.dense = torch.nn.Linear(768, 2)
         else:
             self.dense = torch.nn.Linear(768, 3)
